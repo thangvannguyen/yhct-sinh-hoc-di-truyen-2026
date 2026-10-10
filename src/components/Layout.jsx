@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useApp } from '../lib/store.jsx'
 import { cx } from './ui.jsx'
 import { chapterShortOf } from '../lib/data.js'
+import AppIcon from './AppIcon.jsx'
 
 const SITE_NAME = 'Sinh Học Di Truyền 10-2026'
 
@@ -78,7 +79,7 @@ function ExplainToggle() {
           : 'border-border bg-surface text-text-muted opacity-60 hover:opacity-100 hover:bg-primary-soft'
       )}
     >
-      💡
+      <AppIcon icon="svg:y-tuong" className="text-[1rem]" />
     </button>
   )
 }
@@ -92,7 +93,7 @@ function ThemeToggle() {
       aria-label="Đổi giao diện"
       className="flex h-[38px] w-[38px] items-center justify-center rounded-[11px] border border-border bg-surface text-base transition-colors hover:bg-primary-soft hover:border-border-strong cursor-pointer"
     >
-      {isDark ? '☀️' : '🌙'}
+      <AppIcon icon={isDark ? 'svg:mat-troi' : 'svg:mat-trang'} className="text-[1rem]" />
     </button>
   )
 }

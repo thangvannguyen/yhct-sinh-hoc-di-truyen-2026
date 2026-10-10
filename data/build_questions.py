@@ -28,14 +28,14 @@ LETTERS = 'ABCDE'
 # Tên hiển thị + icon của từng bài. `title` dùng ở tiêu đề trang dạng đề giấy,
 # `short` dùng ở tab / chip / danh sách (tiêu đề bài 7 quá dài nên phải rút gọn).
 CHAPTER_META = {
-    1: dict(title='Sinh học, khoa học của sự sống', short='Sinh học & sự sống', icon='🔬'),
-    2: dict(title='Sinh học tế bào', short='Sinh học tế bào', icon='🧫'),
-    3: dict(title='Năng lượng sinh học', short='Năng lượng sinh học', icon='⚡'),
-    4: dict(title='Cơ sở phân tử của di truyền học', short='Cơ sở phân tử', icon='🧬'),
-    5: dict(title='Sự phân chia tế bào', short='Phân chia tế bào', icon='🔄'),
-    6: dict(title='Các quy luật di truyền', short='Quy luật di truyền', icon='🫛'),
+    1: dict(title='Sinh học, khoa học của sự sống', short='Sinh học & sự sống', icon='svg:kinh-hien-vi'),
+    2: dict(title='Sinh học tế bào', short='Sinh học tế bào', icon='svg:te-bao'),
+    3: dict(title='Năng lượng sinh học', short='Năng lượng sinh học', icon='svg:nang-luong'),
+    4: dict(title='Cơ sở phân tử của di truyền học', short='Cơ sở phân tử', icon='svg:adn'),
+    5: dict(title='Sự phân chia tế bào', short='Phân chia tế bào', icon='svg:phan-bao'),
+    6: dict(title='Các quy luật di truyền', short='Quy luật di truyền', icon='svg:hat-dau'),
     7: dict(title='Sự phát sinh giao tử, thụ tinh và phát triển của phôi ở người',
-            short='Giao tử & phôi thai', icon='👶'),
+            short='Giao tử & phôi thai', icon='svg:thu-tinh'),
 }
 
 

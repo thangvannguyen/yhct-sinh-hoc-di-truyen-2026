@@ -9,6 +9,7 @@ import {
 } from '../lib/data.js'
 import { useApp } from '../lib/store.jsx'
 import { BackLink, Button, Container, cx } from '../components/ui.jsx'
+import AppIcon from '../components/AppIcon.jsx'
 
 const ALL_CHAPTER_IDS = CHAPTERS.map((c) => c.id)
 
@@ -93,7 +94,7 @@ export default function QuizSetup() {
                     : 'border-border bg-surface text-text'
                 )}
               >
-                <span className="mr-1">{ch.icon}</span>
+                <AppIcon icon={ch.icon} className="mr-1" />
                 Bài {ch.num} · {ch.short}
               </button>
             )

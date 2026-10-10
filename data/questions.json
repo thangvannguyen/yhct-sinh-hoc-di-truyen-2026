@@ -5,7 +5,7 @@
    "num": 1,
    "title": "Sinh học, khoa học của sự sống",
    "short": "Sinh học & sự sống",
-   "icon": "🔬",
+   "icon": "svg:kinh-hien-vi",
    "questions": [
     {
      "id": "bai-1-1",
@@ -286,7 +286,7 @@
    "num": 2,
    "title": "Sinh học tế bào",
    "short": "Sinh học tế bào",
-   "icon": "🧫",
+   "icon": "svg:te-bao",
    "questions": [
     {
      "id": "bai-2-17",
@@ -1116,7 +1116,7 @@
    "num": 3,
    "title": "Năng lượng sinh học",
    "short": "Năng lượng sinh học",
-   "icon": "⚡",
+   "icon": "svg:nang-luong",
    "questions": [
     {
      "id": "bai-3-65",
@@ -1560,7 +1560,7 @@
    "num": 4,
    "title": "Cơ sở phân tử của di truyền học",
    "short": "Cơ sở phân tử",
-   "icon": "🧬",
+   "icon": "svg:adn",
    "questions": [
     {
      "id": "bai-4-90",
@@ -2208,7 +2208,7 @@
    "num": 5,
    "title": "Sự phân chia tế bào",
    "short": "Phân chia tế bào",
-   "icon": "🔄",
+   "icon": "svg:phan-bao",
    "questions": [
     {
      "id": "bai-5-127",
@@ -2353,7 +2353,7 @@
    "num": 6,
    "title": "Các quy luật di truyền",
    "short": "Quy luật di truyền",
-   "icon": "🫛",
+   "icon": "svg:hat-dau",
    "questions": [
     {
      "id": "bai-6-135",
@@ -3103,7 +3103,7 @@
    "num": 7,
    "title": "Sự phát sinh giao tử, thụ tinh và phát triển của phôi ở người",
    "short": "Giao tử & phôi thai",
-   "icon": "👶",
+   "icon": "svg:thu-tinh",
    "questions": [
     {
      "id": "bai-7-178",

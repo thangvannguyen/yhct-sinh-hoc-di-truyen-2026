@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { BackLink, Button, Container } from '../components/ui.jsx'
 import { LECTURES, lectureById, lectureUrl } from '../lib/lectures.js'
+import AppIcon from '../components/AppIcon.jsx'
 
 // Safari trên iOS và Chrome trên Android không nhúng được PDF: thẻ <object> chỉ cho
 // ra một ô trắng rỗng. Trên các máy đó phải mời người dùng mở bằng trình xem của
@@ -20,7 +21,10 @@ function PdfList() {
   return (
     <Container>
       <BackLink to="/" />
-      <h1 className="mb-1 text-[1.25rem] font-extrabold">📕 Tài liệu Sinh Học Di Truyền</h1>
+      <h1 className="mb-1 text-[1.25rem] font-extrabold">
+        <AppIcon icon="svg:tai-lieu" className="mr-1.5" />
+        Tài liệu Sinh Học Di Truyền
+      </h1>
       <p className="mb-4 text-[0.85rem] text-text-muted">
         {CAN_EMBED_PDF
           ? 'Chọn một mục để xem trực tiếp trong web, hoặc tải file về máy'
@@ -34,7 +38,7 @@ function PdfList() {
             className="!justify-start gap-3 px-3 py-3 text-left sm:gap-[15px] sm:px-3.5"
           >
             <span className="flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-[12px] border border-border text-[1.35rem]" style={{ background: 'linear-gradient(135deg, var(--primary-soft), color-mix(in srgb, var(--primary-soft) 55%, var(--surface)))' }}>
-              {lec.icon}
+              <AppIcon icon={lec.icon} />
             </span>
             <span className="min-w-0 flex-1">
               <span className="block text-[0.92rem] font-semibold leading-snug">{lec.title}</span>
@@ -58,7 +62,7 @@ function OpenPdfCard({ lecture, url }) {
         className="mx-auto mb-3 flex h-[64px] w-[64px] items-center justify-center rounded-[18px] border border-border text-[2rem]"
         style={{ background: 'linear-gradient(135deg, var(--primary-soft), color-mix(in srgb, var(--primary-soft) 55%, var(--surface)))' }}
       >
-        {lecture.icon}
+        <AppIcon icon={lecture.icon} />
       </div>
       <p className="m-0 mb-1 text-[0.95rem] font-semibold">{lecture.title}</p>
       <p className="m-0 mb-5 text-[0.82rem] text-text-muted">
@@ -87,7 +91,7 @@ function PdfViewer({ lecture }) {
 
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-[1.1rem] font-extrabold leading-snug sm:text-[1.25rem]">
-          {lecture.icon} {lecture.title}
+          <AppIcon icon={lecture.icon} /> {lecture.title}
         </h1>
         {CAN_EMBED_PDF && (
           <div className="flex gap-2">

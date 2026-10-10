@@ -5,6 +5,7 @@ import { useApp } from '../lib/store.jsx'
 import { BackLink, Container, cx } from './ui.jsx'
 import QuizNav from './QuizNav.jsx'
 import { AnswerBadge, AnswerNote, DocOption, ExplanationReveal, QuestionNote } from './Question.jsx'
+import AppIcon from './AppIcon.jsx'
 
 /**
  * Paper-style list of every question in `ids` (the "full" display mode).
@@ -87,7 +88,7 @@ export default function DocList({
         onClick={onShuffle}
         className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-[9px] border-[1.5px] border-primary bg-primary-soft px-3 py-2.5 text-[0.85rem] font-bold text-primary-dark transition-colors hover:bg-primary hover:text-white min-[720px]:mt-3 cursor-pointer"
       >
-        🔀 Trộn câu hỏi
+        <AppIcon icon="svg:tron" /> Trộn câu hỏi
       </button>
       <div className="flex justify-center gap-3 text-[0.72rem] text-text-muted">
         <span className="text-success">✔ Đúng {stats.correct}</span>
@@ -108,7 +109,11 @@ export default function DocList({
           <div className="rounded-card border border-border bg-surface p-7 shadow-soft font-serif max-[470px]:px-5 max-[470px]:py-6">
             {pageTitle && (
               <div className="mb-[22px] text-center text-[1.08rem] font-bold uppercase tracking-[0.02em]">
-                {pageIcon ? `${pageIcon} ` : ''}
+                {pageIcon && (
+                  <>
+                    <AppIcon icon={pageIcon} />{' '}
+                  </>
+                )}
                 {pageTitle}
               </div>
             )}

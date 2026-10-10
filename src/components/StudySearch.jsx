@@ -8,6 +8,7 @@ import {
   optionLabel,
 } from '../lib/data.js'
 import { cx } from './ui.jsx'
+import AppIcon from './AppIcon.jsx'
 
 const MAX_DROPDOWN_RESULTS = 30
 
@@ -147,7 +148,7 @@ export default function StudySearch({ chapterId, onScopeFilterChange }) {
                 className="block w-full cursor-pointer border-b border-border px-4 py-3 text-left last:border-b-0 hover:bg-primary-soft"
               >
                 <div className="mb-1 flex items-center gap-1.5 text-[0.7rem] font-bold uppercase text-primary">
-                  <span>{chapterIcon(r.chapterId)}</span>
+                  <AppIcon icon={chapterIcon(r.chapterId)} />
                   {r.chapterShort}
                   {r.matchedIn === 'answer' && (
                     <span className="rounded-full bg-warning-soft px-1.5 py-0.5 text-[0.65rem] font-bold normal-case text-warning">

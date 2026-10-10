@@ -13,6 +13,7 @@ import { cx } from '../components/ui.jsx'
 import BrowsableQuestions from '../components/BrowsableQuestions.jsx'
 import DocList from '../components/DocList.jsx'
 import StudySearch from '../components/StudySearch.jsx'
+import AppIcon from '../components/AppIcon.jsx'
 
 // The tab strip remounts fresh on every chapter switch (its scrollLeft
 // resets to 0), which hides the tab that was just clicked if it sat further
@@ -51,7 +52,7 @@ function ChapterTabs({ activeId, onPick }) {
               : 'border-border bg-surface text-text-muted hover:border-border-strong'
           )}
         >
-          <span className="mr-1.5">{ch.icon}</span>
+          <AppIcon icon={ch.icon} className="mr-1.5" />
           Bài {ch.num} · {ch.short}
         </button>
       ))}

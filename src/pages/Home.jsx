@@ -3,6 +3,7 @@ import { CHAPTERS, CHAPTER_QUESTIONS, TOTAL_QUESTIONS } from '../lib/data.js'
 import { getHistory, getProgress } from '../lib/storage.js'
 import { Card, Container, Pill, ProgressBar, SectionTitle } from '../components/ui.jsx'
 import { ProgressMeter, ScoreTrend } from '../components/charts.jsx'
+import AppIcon from '../components/AppIcon.jsx'
 
 function ModeCard({ to, emoji, title, desc }) {
   return (
@@ -11,7 +12,7 @@ function ModeCard({ to, emoji, title, desc }) {
       className="group flex items-center gap-[15px] rounded-card border border-border bg-surface p-5 shadow-soft transition-[transform,box-shadow,border-color] duration-150 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-float"
     >
       <div className="flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-[14px] border border-border text-[1.7rem]" style={{ background: 'linear-gradient(135deg, var(--primary-soft), color-mix(in srgb, var(--primary-soft) 60%, var(--surface)))' }}>
-        {emoji}
+        <AppIcon icon={emoji} />
       </div>
       <div className="min-w-0">
         <h3 className="m-0 mb-[3px] text-[1.05rem] font-bold">{title}</h3>
@@ -69,19 +70,19 @@ export default function Home() {
       <div className="grid gap-3">
         <ModeCard
           to="/quiz-setup"
-          emoji="📝"
+          emoji="svg:kiem-tra"
           title="Kiểm tra thử"
           desc="Làm bài trắc nghiệm có chấm điểm, chọn số câu và bài"
         />
         <ModeCard
           to="/study/all/0"
-          emoji="📖"
+          emoji="svg:on-tuan-tu"
           title="Học tuần tự"
           desc={`Học lần lượt toàn bộ ${TOTAL_QUESTIONS} câu, kèm giải thích & mẹo ghi nhớ`}
         />
         <ModeCard
           to="/review-wrong/0"
-          emoji="🔁"
+          emoji="svg:on-cau-sai"
           title="Ôn tập câu sai"
           desc={
             wrongCount
@@ -91,7 +92,7 @@ export default function Home() {
         />
         <ModeCard
           to="/pdf"
-          emoji="📕"
+          emoji="svg:tai-lieu"
           title="Đọc tài liệu"
           desc="7 bài giảng + đề ôn tập gốc, xem trực tiếp trong web"
         />
@@ -125,7 +126,7 @@ export default function Home() {
               className="flex items-center gap-3 rounded-[13px] border border-border bg-surface px-3.5 py-3 shadow-soft-sm transition-[transform,border-color,box-shadow] duration-150 hover:translate-x-[3px] hover:border-border-strong hover:shadow-soft"
             >
               <div className="flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-[12px] border border-border text-[1.35rem]" style={{ background: 'linear-gradient(135deg, var(--primary-soft), color-mix(in srgb, var(--primary-soft) 55%, var(--surface)))' }}>
-                {ch.icon}
+                <AppIcon icon={ch.icon} />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="mb-[7px] text-[0.93rem] font-semibold">

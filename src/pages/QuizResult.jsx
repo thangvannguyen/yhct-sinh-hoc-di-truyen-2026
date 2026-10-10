@@ -3,11 +3,12 @@ import { QUESTION_INDEX, letterFor, optionLabel } from '../lib/data.js'
 import { useApp } from '../lib/store.jsx'
 import { Button, Card, Container, SectionTitle, cx } from '../components/ui.jsx'
 import { AnswerBadge, AnswerNote, DocOption, ExplanationReveal } from '../components/Question.jsx'
+import AppIcon from '../components/AppIcon.jsx'
 
 function scoreTone(percent) {
-  if (percent >= 80) return { color: 'var(--success)', emoji: '🎉' }
-  if (percent >= 50) return { color: 'var(--primary)', emoji: '👍' }
-  return { color: 'var(--danger)', emoji: '📚' }
+  if (percent >= 80) return { color: 'var(--success)', emoji: 'svg:chuc-mung' }
+  if (percent >= 50) return { color: 'var(--primary)', emoji: 'svg:khen' }
+  return { color: 'var(--danger)', emoji: 'svg:hoc-tap' }
 }
 
 export default function QuizResult() {
@@ -20,7 +21,9 @@ export default function QuizResult() {
   return (
     <Container>
       <Card className="py-6 text-center">
-        <div className="mb-1 text-[2rem]">{tone.emoji}</div>
+        <div className="mb-1 text-[2rem]">
+          <AppIcon icon={tone.emoji} />
+        </div>
         <div className="text-[3rem] font-extrabold leading-none" style={{ color: tone.color }}>
           {r.correct}/{r.total}
         </div>

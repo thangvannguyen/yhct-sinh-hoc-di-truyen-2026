@@ -48,7 +48,7 @@ export function chapterShortOf(id) {
 }
 
 export function chapterIcon(id) {
-  return (chapterById(id) || {}).icon || '📘'
+  return (chapterById(id) || {}).icon || 'svg:hoc-tap'
 }
 
 /** Câu bị đề gốc đánh dấu "bỏ" — chỉ xem tham khảo, không chấm điểm. */

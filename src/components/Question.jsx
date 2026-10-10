@@ -1,5 +1,6 @@
 import { imageSrc, isDropped, isGraded, letterFor, optionLabel } from '../lib/data.js'
 import { cx } from './ui.jsx'
+import AppIcon from './AppIcon.jsx'
 
 export function ChapterTag({ children, className }) {
   return (
@@ -24,14 +25,14 @@ export function NoteBox({ children }) {
 
 const UNVERIFIED_NOTE = (
   <>
-    ⚠️ Đáp án của câu này chưa được xác nhận trong tài liệu gốc — xem{' '}
+    <AppIcon icon="svg:canh-bao" /> Đáp án của câu này chưa được xác nhận trong tài liệu gốc — xem{' '}
     <code>data/review_needed.md</code>.
   </>
 )
 
 const DROPPED_NOTE = (
   <>
-    ⚠️ Đề gốc đã đánh dấu <strong>bỏ</strong> câu này — chỉ để tham khảo, không chấm
+    <AppIcon icon="svg:canh-bao" /> Đề gốc đã đánh dấu <strong>bỏ</strong> câu này — chỉ để tham khảo, không chấm
     điểm và không xuất hiện trong bài kiểm tra.
   </>
 )
@@ -204,7 +205,7 @@ export function Explanation({ question, className }) {
       {explain && (
         <div className="rounded-[13px] border border-border bg-surface-2 px-4 py-3.5">
           <div className="mb-1.5 flex items-center gap-1.5 text-[0.78rem] font-bold uppercase tracking-[0.03em] text-primary">
-            <span>💡</span> Giải thích
+            <AppIcon icon="svg:y-tuong" /> Giải thích
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
             <p className="m-0 flex-1 whitespace-pre-line text-[0.9rem] leading-relaxed text-text">
@@ -223,7 +224,7 @@ export function Explanation({ question, className }) {
       {tip && (
         <div className="rounded-[13px] border border-warning bg-warning-soft px-4 py-3.5">
           <div className="mb-1.5 flex items-center gap-1.5 text-[0.78rem] font-bold uppercase tracking-[0.03em] text-warning">
-            <span>🧠</span> Mẹo ghi nhớ
+            <AppIcon icon="svg:nao" /> Mẹo ghi nhớ
           </div>
           <p className="m-0 whitespace-pre-line text-[0.9rem] leading-relaxed text-text">
             {tip}

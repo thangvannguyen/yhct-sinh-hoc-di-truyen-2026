@@ -6,6 +6,7 @@ import { useApp } from '../lib/store.jsx'
 import { BackLink, Button, Container } from '../components/ui.jsx'
 import BrowsableQuestions from '../components/BrowsableQuestions.jsx'
 import DocList from '../components/DocList.jsx'
+import AppIcon from '../components/AppIcon.jsx'
 
 export default function ReviewWrong() {
   const { index } = useParams()
@@ -25,7 +26,9 @@ export default function ReviewWrong() {
       <Container>
         <BackLink to="/" />
         <div className="py-10 text-center text-text-muted">
-          <div className="mb-2.5 text-[2.4rem]">🎉</div>
+          <div className="mb-2.5 text-[2.4rem]">
+            <AppIcon icon="svg:chuc-mung" />
+          </div>
           <p className="mb-5">
             Chưa có câu nào bạn trả lời sai.
             <br />
